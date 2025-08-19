@@ -1,0 +1,310 @@
+
+@media print {
+    .header,
+    .nav,
+    .hero,
+    .about-section,
+    .contact-section,
+    .footer,
+    .print-btn,
+    .cta-button {
+        display: none !important;
+    }
+    
+    @page {
+        margin: 0.5in;
+        size: auto;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: white;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .posters-section {
+        padding: 0;
+    }
+    
+    .section-title,
+    .section-subtitle {
+        display: none;
+    }
+    
+    .posters-grid {
+        display: block;
+    }
+    
+    .poster {
+        width: 8.5in;
+        height: 11in;
+        margin: 0 auto 0.25in auto;
+        page-break-after: always;
+        page-break-inside: avoid;
+        break-after: page;
+        break-inside: avoid;
+        box-shadow: none;
+        border: 2px solid #000;
+        border-radius: 0;
+        background: white;
+        overflow: visible;
+        transform: none !important;
+        display: block;
+        position: relative;
+    }
+    
+    .poster:last-child {
+        page-break-after: auto;
+        break-after: auto;
+    }
+    
+    .poster-content {
+        padding: 0.5in;
+        height: calc(11in - 1in);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .poster-header h2 {
+        font-size: 24pt;
+        font-weight: bold;
+        margin-bottom: 8pt;
+        color: #000;
+    }
+    
+    .tagline {
+        font-size: 14pt;
+        font-style: italic;
+        color: #333;
+        margin-bottom: 12pt;
+    }
+    
+    h3 {
+        font-size: 16pt;
+        font-weight: bold;
+        color: #000;
+    }
+    
+    h4 {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #000;
+    }
+    
+    p, li {
+        font-size: 11pt;
+        color: #000;
+        margin-bottom: 6pt;
+    }
+    
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20pt;
+        margin: 20pt 0;
+    }
+    
+    .benefit-card {
+        background: #f5f5f5;
+        padding: 12pt;
+        border: 1px solid #ccc;
+        border-radius: 0;
+    }
+    
+    .benefit-card i {
+        display: none;
+    }
+    
+    .benefit-card h4 {
+        margin-bottom: 6pt;
+    }
+    
+    .contact-info {
+        margin-top: 20pt;
+        border-top: 2px solid #000;
+        padding-top: 12pt;
+    }
+    
+    .contact-item {
+        margin-bottom: 8pt;
+        font-size: 11pt;
+        font-weight: bold;
+    }
+    
+    .contact-item i {
+        display: none; 
+    }
+    
+    .benefits-list {
+        margin: 16pt 0;
+    }
+    
+    .benefits-list li {
+        margin-bottom: 8pt;
+        font-size: 11pt;
+    }
+    
+    .benefits-list i {
+        display: none;
+    }
+
+    .minimal-design {
+        text-align: center;
+        padding: 1in 0.5in;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .zen-circle {
+        width: 100pt;
+        height: 100pt;
+        border: 3pt solid #000;
+        margin: 0 auto 24pt;
+    }
+    
+    .zen-circle::before {
+        width: 50pt;
+        height: 50pt;
+        background: #333;
+    }
+    
+    .minimal-design h2 {
+        font-size: 28pt;
+        margin-bottom: 24pt;
+        color: #000;
+    }
+    
+    .quote {
+        font-size: 16pt;
+        font-style: italic;
+        margin-bottom: 24pt;
+        line-height: 1.6;
+    }
+    
+    .cafe-name {
+        font-size: 20pt;
+        font-weight: bold;
+        margin-bottom: 24pt;
+        color: #000;
+    }
+    
+    .minimal-contact p {
+        font-size: 12pt;
+        margin-bottom: 6pt;
+    }
+    
+    .services-menu {
+        margin: 16pt 0;
+    }
+    
+    .service-category {
+        margin-bottom: 20pt;
+    }
+    
+    .service-category h3 {
+        font-size: 14pt;
+        margin-bottom: 8pt;
+        border-bottom: 1pt solid #000;
+        padding-bottom: 4pt;
+    }
+    
+    .service-category i {
+        display: none; 
+    }
+    
+    .service-category ul {
+        padding-left: 20pt;
+    }
+    
+    .service-category li {
+        margin-bottom: 4pt;
+        font-size: 10pt;
+    }
+    
+    .service-category li::before {
+        content: '• ';
+        color: #000;
+    }
+
+    .menu-footer {
+        margin-top: 20pt;
+        border-top: 2pt solid #000;
+        padding-top: 12pt;
+    }
+    
+    .menu-image {
+        display: none;
+    }
+    
+    .menu-footer .contact-info {
+        text-align: center;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .poster-image img,
+    .menu-image {
+        max-width: 100%;
+        height: auto;
+        border: 1pt solid #ccc;
+        margin-bottom: 12pt;
+    }
+
+    * {
+        color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .benefit-card,
+    .minimal-design {
+        background: #f8f8f8 !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .poster-cta {
+        margin-top: 20pt;
+        border-top: 1pt solid #000;
+        padding-top: 12pt;
+        text-align: center;
+    }
+    
+    .poster-cta h3 {
+        font-size: 16pt;
+        margin-bottom: 8pt;
+    }
+    
+    .poster-cta p {
+        font-size: 11pt;
+        font-weight: bold;
+    }
+}
+
+@media print and (prefers-contrast: high) {
+    .poster {
+        border: 3px solid #000;
+    }
+    
+    .benefit-card {
+        background: white !important;
+        border: 2px solid #000;
+    }
+    
+    .zen-circle {
+        border: 4pt solid #000;
+    }
+    
+    .zen-circle::before {
+        background: #000;
+    }
+}
